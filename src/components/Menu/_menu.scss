@@ -1,0 +1,41 @@
+.menu {
+  @include inner-container($max-width: 50rem);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background-color: get-color(secondary);
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: $box-shadow;
+  &__list {
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+  }
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid get-color(secondary);
+    }
+  }
+  &__arrow {
+    display: flex;
+    margin-right: 5px;
+    svg {
+      fill: darken(get-color(secondary), 5%);
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+  &__heading {
+    @include flex-settings($align: center);
+    background-color: get-color(primary);
+    padding: map-get($paddings, menu);
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  &__answer {
+    padding: map-get($paddings, menu);
+    overflow-y: hidden;
+  }
+}

@@ -1,0 +1,14 @@
+@mixin font-primary {
+  font-family: 'Roboto', sans-serif;
+}
+@mixin inner-container($max-width: 90rem) {
+  width: 90%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+@mixin flex-settings($align: null, $justify: null, $wrap: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
